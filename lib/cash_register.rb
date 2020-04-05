@@ -1,13 +1,12 @@
 class CashRegister
   attr_accessor :total 
   
-  @items_list = []
-  
   def initialize
     @total = 0
+    @item_list = []
   end
   
-  def add_item(item, price)
+  def add_item(item, price, quanity = 1)
     @total += price
     @items_list << item
   end
